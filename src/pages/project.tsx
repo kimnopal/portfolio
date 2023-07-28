@@ -1,6 +1,6 @@
 import { Heading } from "@/components/Elements/Heading";
 
-const Blog = () => {
+const Project = () => {
     return (
         <>
             <Heading variant="h1" className="text-2xl">This page is still under development</Heading>
@@ -8,4 +8,4 @@ const Blog = () => {
     );
 }
 
-export default Blog;
+export default Project;
