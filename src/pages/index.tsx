@@ -1,3 +1,4 @@
+import Blog from '@/components/Fragments/Blog'
 import Hero from '@/components/Fragments/Hero'
 import Project from '@/components/Fragments/Project'
 import Skill from '@/components/Fragments/Skill'
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Skill />
       <Project />
+      <Blog />
     </>
   )
 }

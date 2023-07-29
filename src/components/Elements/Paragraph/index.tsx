@@ -1,12 +1,12 @@
 
 type ParagraphProps = {
     children: React.ReactNode
-    className: string
+    className?: string
 }
 
 const Paragraph = ({ children, className }: ParagraphProps) => {
     return (
-        <p className={`text-lg font-normal ${className}`}>{children}</p>
+        <p className={`text-base font-normal ${className}`}>{children}</p>
     );
 }
 
