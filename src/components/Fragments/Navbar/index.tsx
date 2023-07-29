@@ -15,7 +15,6 @@ const Navbar = () => {
 
     useEffect(() => {
         const checkIfClickedOutside = (e: MouseEvent) => {
-            console.dir(e.target)
             if ((showMenu && !navLinksWrapper.current.contains(e.target))) {
                 setShowMenu(false)
             }
