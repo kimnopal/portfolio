@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, MouseEventHandler } from "react"
 import navLink from "@/data/navLink.json"
 import Button from "@/components/Elements/Button";
 import { FiMenu, FiX } from "react-icons/fi"
@@ -7,15 +7,15 @@ import { motion } from "framer-motion"
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false)
-    const navLinksWrapper = useRef()
+    const navLinksWrapper = useRef<HTMLDivElement>(null)
 
     const handleClickMenu = () => {
         setShowMenu(prevState => !prevState)
     }
 
     useEffect(() => {
-        const checkIfClickedOutside = (e) => {
-            if ((showMenu && !navLinksWrapper.current.contains(e.target))) {
+        const checkIfClickedOutside = (e: MouseEvent) => {
+            if ((showMenu && !navLinksWrapper.current?.contains(e.target))) {
                 setShowMenu(false)
             }
         }
