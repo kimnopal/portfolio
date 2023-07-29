@@ -1,0 +1,44 @@
+{
+    "hero": {
+        "description": "I am an electrical engineering student who interested in backend development but also likes user interface.",
+        "social": {
+            "resume": "/",
+            "github": "https://github.com/kimnopal",
+            "linkedin": "https://www.linkedin.com/in/naufal-hakim-31bb4b17b/"
+        }
+    },
+    "skill": [
+        {
+            "src": "/icons/go.svg",
+            "alt": "Icon Logo Golang"
+        },
+        {
+            "src": "/icons/typescript.svg",
+            "alt": "Icon Logo Typescript"
+        },
+        {
+            "src": "/icons/nodejs.svg",
+            "alt": "Icon Logo NodeJS"
+        },
+        {
+            "src": "/icons/laravel.svg",
+            "alt": "Icon Logo Laravel"
+        },
+        {
+            "src": "/icons/mysql.svg",
+            "alt": "Icon Logo MySQL"
+        },
+        {
+            "src": "/icons/react.svg",
+            "alt": "Icon Logo React"
+        },
+        {
+            "src": "/icons/nextjs.svg",
+            "alt": "Icon Logo NextJS"
+        },
+        {
+            "src": "/icons/astro.svg",
+            "alt": "Icon Logo Astro"
+        }
+    ]
+}
