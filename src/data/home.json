@@ -34,11 +34,13 @@
         },
         {
             "src": "/icons/nextjs.svg",
-            "alt": "Icon Logo NextJS"
+            "alt": "Icon Logo NextJS",
+            "different": true
         },
         {
             "src": "/icons/astro.svg",
-            "alt": "Icon Logo Astro"
+            "alt": "Icon Logo Astro",
+            "different": true
         }
     ]
 }
