@@ -8,4 +8,4 @@ const ProjectPage = () => {
     );
 }
 
-export default Project;
+export default ProjectPage;

@@ -8,4 +8,4 @@ const UsesPage = () => {
     );
 }
 
-export default Uses;
+export default UsesPage;

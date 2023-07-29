@@ -8,4 +8,4 @@ const BlogPage = () => {
     );
 }
 
-export default Blog;
+export default BlogPage;
