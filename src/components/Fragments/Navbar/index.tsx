@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import navLink from "@/data/navLink.json"
 import Button from "@/components/Elements/Button";
 import { FiMenu, FiX } from "react-icons/fi"
@@ -7,10 +7,25 @@ import { motion } from "framer-motion"
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false)
+    const navLinksWrapper = useRef()
 
     const handleClickMenu = () => {
         setShowMenu(prevState => !prevState)
     }
+
+    useEffect(() => {
+        const checkIfClickedOutside = (e: MouseEvent) => {
+            console.dir(e.target)
+            if ((showMenu && !navLinksWrapper.current.contains(e.target))) {
+                setShowMenu(false)
+            }
+        }
+        document.addEventListener("mousedown", checkIfClickedOutside)
+
+        return () => {
+            document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+    }, [showMenu])
 
     const variants = {
         open: {
@@ -49,6 +64,7 @@ const Navbar = () => {
                         animate={showMenu ? "open" : "closed"}
                         variants={variants}
                         initial={false}
+                        ref={navLinksWrapper}
                     >
                         {/* <div className={`${showMenu ? 'translate-x-0' : 'translate-x-full'} flex flex-col space-y-8 p-4 w-4/5 h-screen absolute top-0 right-0 z-20 bg-gradient-to-tl from-slate-950 from-50% to-slate-900`}> */}
                         <Button onClick={handleClickMenu} className="w-fit md:hidden"><FiX /></Button>
@@ -58,7 +74,7 @@ const Navbar = () => {
                                 key={i}
                                 className="md:!translate-x-0 md:!opacity-100"
                             >
-                                <Link href={link.path} className="text-lg">{link.name}</Link>
+                                <Link href={link.path} className="text-lg" onClick={handleClickMenu}>{link.name}</Link>
                             </motion.div>
                         ))}
                         {/* </div> */}
