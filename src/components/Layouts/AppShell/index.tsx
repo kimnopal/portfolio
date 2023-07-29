@@ -1,3 +1,4 @@
+import Footer from "@/components/Fragments/Footer";
 import Navbar from "@/components/Fragments/Navbar";
 
 type AppShellProps = {
@@ -13,6 +14,7 @@ const AppShell = (props: AppShellProps) => {
             <main className="mx-auto w-full max-w-3xl flex flex-col pt-32 px-4 gap-8 text-slate-100 lg:max-w-4xl">
                 {children}
             </main>
+            <Footer />
         </div>
     );
 }
